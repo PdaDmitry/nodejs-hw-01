@@ -1,4 +1,5 @@
 import { createFakeContact } from '../utils/createFakeContact.js';
+import { writeContacts } from '../utils/writeContacts.js';
 
 const generateContacts = async (number) => {
   let newContacts = [];
@@ -8,11 +9,11 @@ const generateContacts = async (number) => {
       newContacts.push(createdContact);
     }
     console.log(newContacts);
-
+    writeContacts(newContacts);
     return newContacts;
   } catch (error) {
     console.log(error);
   }
 };
 
-generateContacts(5);
+generateContacts(1);
