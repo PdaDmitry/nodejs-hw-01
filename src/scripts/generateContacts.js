@@ -1,3 +1,18 @@
-const generateContacts = async (number) => {};
+import { createFakeContact } from '../utils/createFakeContact.js';
+
+const generateContacts = async (number) => {
+  let newContacts = [];
+  try {
+    for (let i = 0; i < number; i++) {
+      const createdContact = createFakeContact();
+      newContacts.push(createdContact);
+    }
+    console.log(newContacts);
+
+    return newContacts;
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 generateContacts(5);
