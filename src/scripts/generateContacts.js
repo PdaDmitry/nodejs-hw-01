@@ -8,12 +8,12 @@ const generateContacts = async (number) => {
       const createdContact = createFakeContact();
       newContacts.push(createdContact);
     }
-    console.log(newContacts);
+    // console.log(newContacts);
     writeContacts(newContacts);
     return newContacts;
   } catch (error) {
-    console.log(error);
+    console.log('Error creating new contacts:', error);
   }
 };
 
-generateContacts(1);
+generateContacts(5);
